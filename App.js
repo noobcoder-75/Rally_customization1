@@ -1,7 +1,8 @@
 Ext.define('CustomApp', {
                 extend: 'Rally.app.App',
                 componentCls: 'app',
-                items: {html: 'My first app'},
+                items: [{html: 'My first app!'},{xtype: 'rallyiterationcombobox'},{xtype: 'rallyfieldcombobox',model: 'UserStory'}],
+                layout: 'hbox',
                 launch: function() {
                     console.log("This should be displayed!");
                     var that = this;
