@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>rally_customization1</title>
+
+    <script type="text/javascript" src="https://rally1.rallydev.com/apps/2.0/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define("CustomApp",{extend:"Rally.app.App",componentCls:"app",items:{html:"My first app"},launch:function(){console.log("This should be displayed!");var that=this,context=this.getContext(),stories=[],panel=Ext.create("Ext.panel.Panel",{layout:"hbox",itemId:"parentPanel",componentCls:"panel",items:[{xtype:"panel",width:1600,itemId:"childPanel1"}]});this.add(panel)}});
+
+            Rally.launchApp('CustomApp', {
+                name:"rally_customization1",
+	            parentRepos:""
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+</body>
+</html>
